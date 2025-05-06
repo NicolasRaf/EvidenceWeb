@@ -1,0 +1,182 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdhvh1iufg1ol"]
+
+[ext_resource type="Script" uid="uid://wjays85ub88c" path="res://Script/scene_main.gd" id="1_y6pbf"]
+[ext_resource type="PackedScene" uid="uid://diuw48dywttp" path="res://Scenes/vertice.tscn" id="2_nj75h"]
+
+[sub_resource type="GDScript" id="GDScript_nj75h"]
+script/source = "extends Node2D
+"
+
+[node name="Scene_Main" type="Node2D"]
+script = ExtResource("1_y6pbf")
+
+[node name="Arestas" type="Node2D" parent="."]
+script = SubResource("GDScript_nj75h")
+
+[node name="Line2D" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(372, 262, 207, 149)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(372, 262, 211, 288)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D3" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(372, 262, 395, 403)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D4" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(372, 262, 501, 182)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D5" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(551, 275, 501, 182)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D8" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(551, 275, 751, 219)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D10" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(551, 275, 695, 412)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D9" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(844, 317, 751, 219)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D11" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(485, 501, 751, 219)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D12" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(485, 501, 557, 589)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D13" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(485, 501, 349, 586)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D6" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(681, 114, 501, 182)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D7" type="Line2D" parent="Arestas"]
+z_index = -1
+points = PackedVector2Array(681, 114, 964, 174)
+default_color = Color(1, 0, 0, 1)
+
+[node name="Vertices" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="A" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 246.0
+offset_right = 384.0
+offset_bottom = 276.0
+
+[node name="B" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 141.0
+offset_right = 226.0
+offset_bottom = 171.0
+
+[node name="C" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 272.0
+offset_right = 228.0
+offset_bottom = 302.0
+
+[node name="D" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 387.0
+offset_right = 409.0
+offset_bottom = 417.0
+
+[node name="E" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 169.0
+offset_right = 522.0
+offset_bottom = 199.0
+
+[node name="F" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 99.0
+offset_right = 690.0
+offset_bottom = 129.0
+
+[node name="G" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 159.0
+offset_right = 973.0
+offset_bottom = 189.0
+
+[node name="H" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 253.0
+offset_right = 570.0
+offset_bottom = 283.0
+
+[node name="I" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 731.0
+offset_top = 210.0
+offset_right = 761.0
+offset_bottom = 240.0
+
+[node name="J" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 304.0
+offset_right = 858.0
+offset_bottom = 334.0
+
+[node name="K" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 392.0
+offset_right = 712.0
+offset_bottom = 422.0
+
+[node name="L" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 484.0
+offset_right = 503.0
+offset_bottom = 514.0
+
+[node name="M" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 572.0
+offset_right = 571.0
+offset_bottom = 602.0
+
+[node name="N" parent="Vertices" instance=ExtResource("2_nj75h")]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 570.0
+offset_right = 366.0
+offset_bottom = 600.0
