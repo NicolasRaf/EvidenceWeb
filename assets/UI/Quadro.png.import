@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dva6gg4jguse6"
-path="res://.godot/imported/Quadro_resized.png-d9201b1d3137ff91091512dc63706954.ctex"
+uid="uid://ldn3qvyuvykh"
+path="res://.godot/imported/Quadro.png-9b26088099b39127ce9900237d6c1478.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assents/Quadro_resized.png"
-dest_files=["res://.godot/imported/Quadro_resized.png-d9201b1d3137ff91091512dc63706954.ctex"]
+source_file="res://assets/UI/Quadro.png"
+dest_files=["res://.godot/imported/Quadro.png-9b26088099b39127ce9900237d6c1478.ctex"]
 
 [params]
 

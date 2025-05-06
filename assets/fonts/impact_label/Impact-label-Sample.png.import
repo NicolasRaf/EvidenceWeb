@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ldn3qvyuvykh"
-path="res://.godot/imported/Quadro.png-aeffdc77df09e47db09a9da1ae08a826.ctex"
+uid="uid://cvfs4rmo8rboq"
+path="res://.godot/imported/Impact-label-Sample.png-8c12d341cc73fba35ed1748538e3f6f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assents/Quadro.png"
-dest_files=["res://.godot/imported/Quadro.png-aeffdc77df09e47db09a9da1ae08a826.ctex"]
+source_file="res://assets/fonts/impact_label/Impact-label-Sample.png"
+dest_files=["res://.godot/imported/Impact-label-Sample.png-8c12d341cc73fba35ed1748538e3f6f1.ctex"]
 
 [params]
 

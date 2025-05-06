@@ -1,0 +1,35 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://drcu0epwx6x4s"
+path="res://.godot/imported/Sticky Memos Demo.otf-81fc0880e1f5b101e3442ed20fedcd13.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/sticky_memos/Sticky Memos Demo.otf"
+dest_files=["res://.godot/imported/Sticky Memos Demo.otf-81fc0880e1f5b101e3442ed20fedcd13.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

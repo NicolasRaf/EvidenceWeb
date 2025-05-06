@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://ycjohyt335ug"]
+
+[ext_resource type="Script" uid="uid://bjnymskunbtd7" path="res://scripts/test_scene.gd" id="1_j8ivh"]
+[ext_resource type="Texture2D" uid="uid://dlncdmhw154ne" path="res://assets/UI/BackM.png" id="2_7ddre"]
+[ext_resource type="Texture2D" uid="uid://d24st6atuh8hn" path="res://icon.svg" id="2_nd71p"]
+
+[node name="TestScene" type="CanvasLayer"]
+script = ExtResource("1_j8ivh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+color = Color(0.118581, 0.118581, 0.118581, 0.627451)
+
+[node name="BackM" type="Sprite2D" parent="."]
+position = Vector2(644, 365)
+scale = Vector2(0.738281, 0.565918)
+texture = ExtResource("2_7ddre")
+
+[node name="TextureRect" type="Button" parent="."]
+offset_left = 568.0
+offset_top = 356.0
+offset_right = 704.0
+offset_bottom = 492.0
+theme_override_icons/icon = ExtResource("2_nd71p")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 378.0
+offset_top = 188.0
+offset_right = 912.0
+offset_bottom = 325.0
+theme_override_font_sizes/font_size = 100
+text = "ME APERTE"
+
+[connection signal="pressed" from="TextureRect" to="." method="_on_texture_rect_pressed"]
