@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://yuex405k6cv3"]
+
+[ext_resource type="Script" uid="uid://b36bnfdby6gq8" path="res://scripts/fade_in_crv.gd" id="1_nbtpd"]
+[ext_resource type="Shader" uid="uid://carljh1geiyc0" path="res://assets/shaders/titlescreen.gdshader" id="2_foist"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fa8mm"]
+shader = ExtResource("2_foist")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = false
+shader_parameter/roll = false
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 0.1
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.0
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.0
+shader_parameter/aberration = 0.03
+shader_parameter/brightness = 1.0
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = true
+shader_parameter/vignette_intensity = 0.0
+shader_parameter/vignette_opacity = 0.0
+
+[node name="FadeInCRV" type="CanvasLayer"]
+script = ExtResource("1_nbtpd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_fa8mm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = -5.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
