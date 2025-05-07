@@ -5,24 +5,43 @@ var active: bool = true;
 var used: bool = false
 var tweenDuration: float = 0.2;
 var tweenDurationTrack: float = 2.0;
+var sucess:bool;
 
 @export var spawnScene: PackedScene;
 
 func _ready() -> void:
 	connect("mouse_entered", handleMouseEntered);
 	connect("mouse_exited", handleMouseExited);
+	set_process(true)
 	
 func _process(delta: float) -> void:
 	if active and inArea and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		active = false;
 		print("Spawnando cena...");
-		get_tree().root.add_child(spawnScene.instantiate());
+		_spawn_and_connect()
+		
+func _spawn_and_connect() -> void:
+	var inst = spawnScene.instantiate()
+	inst.connect("success", _on_child_sucess)
+	inst.connect("failed", _on_child_fail)
+	get_tree().root.add_child(inst)
+
+func _on_child_sucess() -> void:
+	print("Sucesso Recebido")
+	sucess = true
+	if not used:
+		_fade_to_green()
+		used = true
+		set_process(false)
 	
-# Essa linha aqui serve pra fazer pra a "pista" ficar cinza depois de ser resolvida ">:)"
-	if active == false and used == false:
+func _on_child_fail() -> void:
+	print("Falha recebida")
+	sucess = false
+	if not used:
 		_fade_to_gray()
 		used = true
-		
+		set_process(false)
+
 func _fade_to_gray() -> void:
 	var tween:= get_tree().create_tween()
 	tween.set_trans(Tween.TRANS_SINE)
