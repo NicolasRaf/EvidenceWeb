@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdhvh1iufg1ol"]
 
 [ext_resource type="Script" uid="uid://wjays85ub88c" path="res://scripts/scene_main.gd" id="1_y6pbf"]
-[ext_resource type="PackedScene" uid="uid://diuw48dywttp" path="res://scenes/vertice.tscn" id="2_nj75h"]
+[ext_resource type="PackedScene" uid="uid://diuw48dywttp" path="res://Scenes/vertice.tscn" id="2_nj75h"]
 
 [sub_resource type="GDScript" id="GDScript_nj75h"]
 script/source = "extends Node2D
