@@ -1,31 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://e2r6ij8hq00n"]
+[gd_scene load_steps=5 format=3 uid="uid://e2r6ij8hq00n"]
 
-[ext_resource type="Texture2D" uid="uid://b0jo4nqmc3nve" path="res://assets/UI/TitleBack.png" id="1_6d6rd"]
 [ext_resource type="Script" uid="uid://b3v0ynlhco0eh" path="res://scripts/titlescreen.gd" id="1_t7v6v"]
-[ext_resource type="FontFile" uid="uid://cxb6gexog56yq" path="res://assets/fonts/impact_label/Impact Label Reversed.ttf" id="2_3jj3l"]
-[ext_resource type="Texture2D" uid="uid://bs1v06wm88vru" path="res://assets/UI/buttonIcon.png" id="3_tt55a"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t7v6v"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vhbaf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v6ms7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rpvs4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_84han"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ejck"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w77yj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7hj3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8or72"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hcbn3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ybki2"]
+[ext_resource type="Texture2D" uid="uid://b0jo4nqmc3nve" path="res://assets/UI/TitleBack.png" id="2_vhbaf"]
+[ext_resource type="Texture2D" uid="uid://cyqk2h7c4oaaj" path="res://assets/UI/titlescreen.tres" id="3_v6ms7"]
+[ext_resource type="FontFile" uid="uid://cxb6gexog56yq" path="res://assets/fonts/impact_label/Impact Label Reversed.ttf" id="4_rpvs4"]
 
 [node name="Titlescreen" type="Control"]
 layout_mode = 3
@@ -44,8 +22,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_6d6rd")
+texture = ExtResource("2_vhbaf")
 expand_mode = 1
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -183.0
+offset_top = -331.0
+offset_right = 183.0
+offset_bottom = -177.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_v6ms7")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -59,40 +52,10 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/shadow_offset_x = 10
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("2_3jj3l")
+theme_override_fonts/font = ExtResource("4_rpvs4")
 theme_override_font_sizes/font_size = 140
 text = "Evidence Web"
 uppercase = true
-
-[node name="ColorRect" type="ColorRect" parent="Title"]
-visible = false
-modulate = Color(1, 0, 0.0901961, 1)
-show_behind_parent = true
-layout_mode = 0
-offset_left = -1.0
-offset_top = -16.0
-offset_right = 865.0
-offset_bottom = 128.0
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 379.0
-offset_top = 321.0
-offset_right = 889.0
-offset_bottom = 596.0
-pivot_offset = Vector2(249, 121)
-theme_override_icons/icon = ExtResource("3_tt55a")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_t7v6v")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_vhbaf")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_v6ms7")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_rpvs4")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_84han")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6ejck")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_w77yj")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_v7hj3")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_8or72")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_hcbn3")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ybki2")
 
 [connection signal="mouse_entered" from="Button" to="." method="_buttonEntered"]
 [connection signal="mouse_exited" from="Button" to="." method="_buttonExited"]
