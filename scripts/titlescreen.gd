@@ -6,7 +6,7 @@ var buttonYStartPosition: float;
 func _ready() -> void:
 	buttonYStartPosition = button.position.y;
 	
-	button.connect("pressed", func(): get_tree().change_scene_to_file("res://scenes/scene_main.tscn"));
+	button.connect("pressed", func(): Global.transToScene("main"));
 	button.pivot_offset = Vector2(button.size.x/2, button.size.y/2)
 
 func _buttonExited() -> void:
