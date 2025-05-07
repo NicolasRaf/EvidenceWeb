@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://diuw48dywttp"]
 
 [ext_resource type="Script" uid="uid://ddcibd8ic2mru" path="res://scripts/vertices.gd" id="1_si5pv"]
-[ext_resource type="PackedScene" uid="uid://ycjohyt335ug" path="res://scenes/test_scene.tscn" id="2_w0c81"]
+[ext_resource type="PackedScene" uid="uid://ycjohyt335ug" path="res://Scenes/test_scene.tscn" id="2_w0c81"]
 
 [node name="Vertice" type="ColorRect"]
 z_index = 1

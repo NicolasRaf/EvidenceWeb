@@ -1,0 +1,244 @@
+[gd_scene load_steps=13 format=3 uid="uid://bwmhordogx01t"]
+
+[ext_resource type="Script" uid="uid://c0hec3j68irwn" path="res://Scenes/Mini-games/descubra_pistas.gd" id="1_0newv"]
+[ext_resource type="Texture2D" uid="uid://bfpq55he42q8l" path="res://assets/UI/Quarto-cenario.png" id="1_uvf1c"]
+[ext_resource type="Texture2D" uid="uid://buvv3riqghilf" path="res://assets/UI/Moveis.png" id="2_m1ng3"]
+[ext_resource type="Texture2D" uid="uid://b0ot7qt0kqdar" path="res://assets/UI/relogio-removebg-preview.png" id="4_uqin3"]
+[ext_resource type="Texture2D" uid="uid://hsc4mt0eple0" path="res://assets/UI/pixil-frame-0 (1).png" id="5_bvvcy"]
+[ext_resource type="Texture2D" uid="uid://cfyglrhorkddl" path="res://assets/UI/Papel.png" id="6_n5hlb"]
+[ext_resource type="Texture2D" uid="uid://dy8c7dkvx4ncu" path="res://assets/UI/Vinho.png" id="7_rv3ox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqin3"]
+size = Vector2(178, 379)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvvcy"]
+size = Vector2(83.2813, 110.969)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5hlb"]
+size = Vector2(202, 104)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uqin3"]
+radius = 15.252
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv3ox"]
+size = Vector2(203.077, 73.8462)
+
+[node name="Descubra_Pistas" type="CanvasLayer"]
+script = ExtResource("1_0newv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -82.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_uvf1c")
+expand_mode = 1
+
+[node name="Estante" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Estante"]
+position = Vector2(542, 321)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("2_m1ng3")
+region_enabled = true
+region_rect = Rect2(519.031, 61.2097, 433.818, 821.351)
+
+[node name="Area2D" type="Area2D" parent="Estante"]
+position = Vector2(522, 312)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Estante/Area2D"]
+shape = SubResource("RectangleShape2D_uqin3")
+
+[node name="Mesa" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa"]
+position = Vector2(830, 474)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("2_m1ng3")
+region_enabled = true
+region_rect = Rect2(951.921, 518.07, 562.745, 420.345)
+
+[node name="Area2D" type="Area2D" parent="Mesa"]
+position = Vector2(218, 125)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Area2D"]
+position = Vector2(659, 344)
+shape = SubResource("RectangleShape2D_bvvcy")
+
+[node name="cama" type="Node2D" parent="."]
+z_index = 2
+scale = Vector2(-1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="cama"]
+position = Vector2(-1174, 505)
+scale = Vector2(0.695, 0.695)
+texture = ExtResource("2_m1ng3")
+region_enabled = true
+region_rect = Rect2(0, 375.785, 503.067, 551.759)
+
+[node name="Area2D" type="Area2D" parent="cama"]
+position = Vector2(-1118, 620)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cama/Area2D"]
+position = Vector2(-7, -10)
+shape = SubResource("RectangleShape2D_n5hlb")
+
+[node name="Relogio" type="Node2D" parent="."]
+z_index = 2
+scale = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Relogio"]
+position = Vector2(283, 44.5)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("4_uqin3")
+
+[node name="Area2D" type="Area2D" parent="Relogio"]
+position = Vector2(282.5, 42.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Relogio/Area2D"]
+position = Vector2(0.25, -0.25)
+shape = SubResource("CircleShape2D_uqin3")
+
+[node name="Vinhos" type="Node2D" parent="."]
+
+[node name="Vinho" type="Sprite2D" parent="Vinhos"]
+z_index = 1
+position = Vector2(1179.44, 612.453)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("7_rv3ox")
+region_enabled = true
+region_rect = Rect2(161.844, 205.847, 222.713, 693.238)
+
+[node name="Vinho2" type="Sprite2D" parent="Vinhos"]
+z_index = 1
+position = Vector2(1196.44, 617.453)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("7_rv3ox")
+region_enabled = true
+region_rect = Rect2(161.844, 205.847, 222.713, 693.238)
+
+[node name="Vinho3" type="Sprite2D" parent="Vinhos"]
+z_index = 1
+position = Vector2(1162.44, 612.453)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("7_rv3ox")
+region_enabled = true
+region_rect = Rect2(161.844, 205.847, 222.713, 693.238)
+
+[node name="Vinho4" type="Sprite2D" parent="Vinhos"]
+z_index = 1
+position = Vector2(1213.44, 621.453)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("7_rv3ox")
+region_enabled = true
+region_rect = Rect2(161.844, 205.847, 222.713, 693.238)
+
+[node name="papeis" type="Node2D" parent="."]
+
+[node name="Papel" type="Sprite2D" parent="papeis"]
+modulate = Color(0.695503, 0.695503, 0.695503, 1)
+z_index = 1
+position = Vector2(743, 582)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("6_n5hlb")
+region_enabled = true
+region_rect = Rect2(-0.589645, 631.602, 954.392, 384.4)
+
+[node name="Papel2" type="Sprite2D" parent="papeis"]
+modulate = Color(0.695503, 0.695503, 0.695503, 1)
+z_index = 1
+position = Vector2(878, 581)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("6_n5hlb")
+region_enabled = true
+region_rect = Rect2(-0.589645, 765.437, 524.371, 250.564)
+
+[node name="Papel3" type="Sprite2D" parent="papeis"]
+modulate = Color(0.695503, 0.695503, 0.695503, 1)
+z_index = 1
+position = Vector2(970, 574)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("6_n5hlb")
+region_enabled = true
+region_rect = Rect2(-0.589645, 765.437, 524.371, 250.564)
+
+[node name="Papel4" type="Sprite2D" parent="papeis"]
+modulate = Color(0.695503, 0.695503, 0.695503, 1)
+z_index = 1
+position = Vector2(970, 574)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("6_n5hlb")
+region_enabled = true
+region_rect = Rect2(-0.589645, 765.437, 524.371, 250.564)
+
+[node name="Papel5" type="Sprite2D" parent="papeis"]
+modulate = Color(0.695503, 0.695503, 0.695503, 1)
+z_index = 1
+position = Vector2(176, 641)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("6_n5hlb")
+region_enabled = true
+region_rect = Rect2(-0.589645, 765.437, 524.371, 250.564)
+
+[node name="Papel6" type="Sprite2D" parent="papeis"]
+modulate = Color(0.695503, 0.695503, 0.695503, 1)
+z_index = 1
+position = Vector2(229, 660)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("6_n5hlb")
+region_enabled = true
+region_rect = Rect2(-0.589645, 765.437, 524.371, 250.564)
+
+[node name="Papel7" type="Sprite2D" parent="papeis"]
+modulate = Color(0.695503, 0.695503, 0.695503, 1)
+z_index = 1
+position = Vector2(237, 631)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("6_n5hlb")
+region_enabled = true
+region_rect = Rect2(-0.589645, 765.437, 524.371, 250.564)
+
+[node name="Papel8" type="Sprite2D" parent="papeis"]
+modulate = Color(0.695503, 0.695503, 0.695503, 1)
+z_index = 1
+position = Vector2(379, 535)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("6_n5hlb")
+region_enabled = true
+region_rect = Rect2(-0.589645, 765.437, 524.371, 250.564)
+
+[node name="Carta" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Carta-mesa" type="Sprite2D" parent="Carta"]
+modulate = Color(0.724643, 0.724643, 0.724643, 1)
+z_index = 2
+position = Vector2(790, 382)
+scale = Vector2(1.70104, 1.14108)
+skew = -1.26362
+texture = ExtResource("5_bvvcy")
+
+[node name="Area2D" type="Area2D" parent="Carta"]
+position = Vector2(752, 375)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carta/Area2D"]
+scale = Vector2(0.325, 0.325)
+shape = SubResource("RectangleShape2D_rv3ox")
+
+[connection signal="mouse_entered" from="Estante/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Estante/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Mesa/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Mesa/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="cama/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="cama/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Relogio/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Relogio/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Carta/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Carta/Area2D" to="." method="_on_area_2d_mouse_exited"]
