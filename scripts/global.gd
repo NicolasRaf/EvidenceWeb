@@ -3,7 +3,8 @@ extends Node2D
 @onready var CRT: CanvasLayer = get_tree().root.get_node("/root/CanvasCrt");
 
 var scenesDict: Dictionary = {
-	"main": preload("res://scenes/scene_main.tscn")
+	"main": preload("res://scenes/scene_main.tscn"),
+	"puzzle": preload("res://Scenes/Mini-games/Descubra_Pistas.tscn")
 }
 
 # Função para a transição de saída

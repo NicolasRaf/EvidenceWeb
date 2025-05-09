@@ -18,7 +18,11 @@ func _process(delta: float) -> void:
 	if active and inArea and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		active = false;
 		print("Spawnando cena...");
-		_spawn_and_connect()
+		
+		if (name != "A"):
+			_spawn_and_connect()
+		else :
+			Global.transToScene("puzzle")
 		
 func _spawn_and_connect() -> void:
 	var inst = spawnScene.instantiate()

@@ -1,12 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwmhordogx01t"]
+[gd_scene load_steps=15 format=3 uid="uid://bwmhordogx01t"]
 
-[ext_resource type="Script" uid="uid://c0hec3j68irwn" path="res://Scenes/Mini-games/descubra_pistas.gd" id="1_0newv"]
+[ext_resource type="Script" uid="uid://c0hec3j68irwn" path="res://scripts/descubra_pistas.gd" id="1_0newv"]
 [ext_resource type="Texture2D" uid="uid://bfpq55he42q8l" path="res://assets/UI/Quarto-cenario.png" id="1_uvf1c"]
 [ext_resource type="Texture2D" uid="uid://buvv3riqghilf" path="res://assets/UI/Moveis.png" id="2_m1ng3"]
+[ext_resource type="Shader" uid="uid://khe763pt4ekr" path="res://ShaderBlur.gdshader" id="3_is347"]
 [ext_resource type="Texture2D" uid="uid://b0ot7qt0kqdar" path="res://assets/UI/relogio-removebg-preview.png" id="4_uqin3"]
-[ext_resource type="Texture2D" uid="uid://hsc4mt0eple0" path="res://assets/UI/pixil-frame-0 (1).png" id="5_bvvcy"]
 [ext_resource type="Texture2D" uid="uid://cfyglrhorkddl" path="res://assets/UI/Papel.png" id="6_n5hlb"]
+[ext_resource type="Texture2D" uid="uid://cyj2cot2c2lrw" path="res://assets/UI/Carta-Mesa.png" id="7_is347"]
 [ext_resource type="Texture2D" uid="uid://dy8c7dkvx4ncu" path="res://assets/UI/Vinho.png" id="7_rv3ox"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_is347"]
+shader = ExtResource("3_is347")
+shader_parameter/lod = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqin3"]
 size = Vector2(178, 379)
@@ -38,6 +43,17 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("1_uvf1c")
 expand_mode = 1
+
+[node name="BlurEffect" type="ColorRect" parent="."]
+z_index = 5
+material = SubResource("ShaderMaterial_is347")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
 
 [node name="Estante" type="Node2D" parent="."]
 z_index = 2
@@ -223,7 +239,7 @@ z_index = 2
 position = Vector2(790, 382)
 scale = Vector2(1.70104, 1.14108)
 skew = -1.26362
-texture = ExtResource("5_bvvcy")
+texture = ExtResource("7_is347")
 
 [node name="Area2D" type="Area2D" parent="Carta"]
 position = Vector2(752, 375)
